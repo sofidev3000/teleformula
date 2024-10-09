@@ -12,7 +12,7 @@
     &__info{
         @include flexbox();
         gap: 2rem;
-        font-size:4rem;
+        font-size:3rem;
     }
     &__title{
         &:hover{
