@@ -1,0 +1,27 @@
+---
+
+---
+
+<script>
+  const date = new Date();
+  const options = { day: "numeric", month: "long", year: "numeric" };
+  const formattedDate = date.toLocaleString("es-ES", options);
+
+  // Asignar la fecha formateada al contenido de texto
+  document.querySelector(".header__date").textContent = formattedDate;
+</script>
+<header class="header">
+  <img
+    src="/img/teleformula-color.png"
+    alt="Teleformula logo"
+    aria-label="Teleformula logo"
+    width="250"
+    height="250"
+  />
+  <div class="header__info">
+    <h2 class="header__title">Sobre Nosotros</h2>
+    <p class="header__date"></p>
+  </div>
+</header>
+
+<style></style>

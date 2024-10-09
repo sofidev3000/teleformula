@@ -1,0 +1,36 @@
+.header{
+    margin: 0 auto;
+    @include flexbox(space-between, center);
+    width: 100%;
+    flex-wrap: wrap;
+    min-width: 20rem;
+    max-width: 1300px;
+    padding:  2rem 1rem;
+    gap: 1rem;
+
+
+    &__info{
+        @include flexbox();
+        gap: 2rem;
+        font-size:4rem;
+    }
+    &__title{
+        &:hover{
+            color: v.$secondary;
+        }
+    }
+    &__date{
+        font-weight: 700;
+        color: v.$secondary;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header{
+    &__info{
+        @include flexbox();
+        gap: 2rem;
+        font-size:1.6rem;
+        text-align: center;
+    }
+    }
+}

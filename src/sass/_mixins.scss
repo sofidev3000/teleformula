@@ -1,0 +1,30 @@
+
+@mixin fontStyle($fontWeight, $fontSize, $lineHeight) {
+    font-family: v.$font;
+
+    // Condicional para seleccionar el peso de la fuente
+    @if $fontWeight == 'bold' {
+        font-weight: bold;
+    } @else if $fontWeight == 'normal' {
+        font-weight: normal;
+    } @else if $fontWeight == 'extra-bold' {
+        font-weight: 800; // Definir extra bold como 800
+    } @else if $fontWeight == 'light' {
+        font-weight: 300; // Definir light como 300
+    } @else {
+        font-weight: $fontWeight; // Si no coincide, usar el valor directamente
+    }
+
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+
+
+@mixin flexbox(
+    $justifyContent: center,
+    $alignItems: center
+) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
